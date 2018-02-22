@@ -1,0 +1,12 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'blog/sakura.css' %}" type="text/css">
+
+<h1>Authors</h1>
+<ul>
+{% for author in object_list %}
+    <li>{{ author.name }} - {{ author.email }}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
